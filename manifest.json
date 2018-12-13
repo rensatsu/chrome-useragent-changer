@@ -1,0 +1,36 @@
+{
+    "name": "User Agent Changer",
+    "version": "0.3",
+    "description": "Changes User Agent header",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "64": "img/icon64.png",
+        "128": "img/icon128.png"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "manifest_version": 2
+}

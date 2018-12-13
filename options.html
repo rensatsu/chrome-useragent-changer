@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Options</title>
+		<style>
+			html, body {
+				width: 600px;
+			}
+			
+			body {
+				width: 100%;
+				padding: 10px;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			.line {
+				padding: 5px;
+				display: flex;
+			}
+			
+			label {
+				cursor: pointer;
+			}
+			
+			div input, div button, div div, div pre {
+				width: 70%;
+				padding: 3px;
+			}
+			
+			div span, div label {
+				width: 30%;
+				padding: 3px;
+			}
+			
+			#status {
+				font-weight: bold;
+				font-size: 110%;
+				margin: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='status' class='line'>Preferences</div>
+		<div class='line'>
+			<label for='myUA'>User Agent</label>
+			<input type='text' id='myUA'>
+		</div>
+		<div class='line'>
+			<span>Substitutions</span>
+			<div>
+				%(webkit) - WebKit version (WebKit/xxx.xx)<br/>
+				%(chrome) - Chrome (Chromium) Version (Chrome/xx.xx.xx.xx)<br/>
+				%(safari) - Safari Version
+			</div>
+		</div>
+		<div class='line'>
+			<span>Suggested Line</span>
+			<div id='myUA-copy'>Mozilla/5.0 (X11; Linux x86_64) %(webkit) (KHTML, like Gecko) Ubuntu/16.04 %(chrome) %(safari)</div>
+		</div>
+		<div class='line'>
+			<span>&nbsp;</span>
+			<button id='save'>Save</button>
+		</div>
+		
+		<script src='js/options.js'></script>
+	</body>
+</html>
